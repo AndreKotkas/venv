@@ -4,6 +4,7 @@ import geocoder
 
 # Create your views here.
 def index(request):
+    #address = request.POST.get('address')
     location = geocoder.osm('EE')
     lat = location.lat
     lng = location.lng
