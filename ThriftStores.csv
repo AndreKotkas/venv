@@ -1,0 +1,57 @@
+CITY,STORE_NAME,ADDRESS,OPEN_TIME,PHONE_NR,LAT,LONG
+Tallinn,Humana,"Järve, Pärnu mnt 238","E-L 10-21, P* 10-19",58058812,59.3972865,24.7259934
+Tallinn,Humana,"Kaubamaja, Gonsiori 2","E-R 9-21, L-P* 9-19",54540333,59.43473,24.76427
+Tallinn,Humana,"Magistrali, Sõpruse pst 201","E-L 10-20, P* 10-18",5146687,59.401456,24.6970564
+Tallinn,Humana,Mustamäe tee 18,"E-R 9-20, L 10-18, P* 10-17",5543690,59.421254,24.6967702
+Tallinn,Humana,Narva mnt 4,"E-R 9-20, L 10-18, P* 10-17",54540222,59.4370087,24.7597801
+Tallinn,Humana,Pärnu mnt 66,"E-R 9-19, L 10-18, P* 10-17",55636860,59.4249741,24.7421982
+Tallinn,Humana,"Pääsküla, Pärnu mnt 534b","E-R 10-19, L-P* 10-17",53073943,59.3585119,24.6294875
+Tallinn,Humana,Vikerlase 19,"E-R 9-20, L-P* 10-18",55612372,59.4394751,24.8441485
+Tallinn,Humana,Õismäe tee 107,"E-R 9-19, L 9-18, P* 9-17",54555577,59.4114816,24.6372697
+Tartu,Humana,Kuperjanovi 20,"E-R 10-19, L-P* 10-17",5539237,58.3765042,26.7136433
+Tartu,Humana,Kompanii 1c,"E-R 10-19, L-P* 10-17",55626634,58.3809783,26.7240162
+Pärnu,Humana,Riia mnt 106a,"E-R 9-19, L-P* 10-17",55671419,58.3709743,24.5469536
+Pärnu,Humana,Hommiku 2,"E-L 10-20, P* 10-18",55608454,58.3865868,24.503115
+Narva,Humana,Tallinna mnt 41,E-P* 10-20,54540240,59.3810817,28.1753118
+Jõhvi,Humana,Narva mnt 8,"E-R 9-19, L 9-17, P* 9-16",58778577,59.4510951,24.840007
+Rakvere,Humana,F. G. Adoffi 11,"E-R 9-19, L 10-17, P* 10-16",5032063,59.3488154,26.3632277
+Haapsalu,Humana,Rannarootsi tee 1,"E-R 10-20, L-P* 10-18",53481091,58.9359139,23.5721038
+Kuressaare,Humana,Tallinna tänav 1,"E-R 9-19, L 9-17, P* 10-16",5114446,58.2530632,22.4851799
+Viljandi,Humana,Riia mnt 35,"E-R 9-20, L 9-18, P* 9-17",53099781,58.35325623,25.58298874
+Valga,Humana,Riia tänav 18,"E-R 9-19, L-P* 9-17",58545630,57.77781,26.0473
+Võru,Humana,Kooli 6,"E-R 10-19, L 10-18, P* 10-16",59123366,57.8460113,27.0087097
+Tallinn,Uuskasutuskeskus,Tatari 64,"E-R 10-18, L 10-16",5553 0240,59.4252866,24.7447783
+Tallinn,Uuskasutuskeskus,Liivalaia 29,"E-R 10-18, L 10-16",5553 4121,59.429447,24.755658
+Tallinn,Uuskasutuskeskus,Erika 14,"E-R 10-18, L 10-16",5553 6650,59.4519319,24.7176649
+Tallinn,Uuskasutuskeskus,Mustamäe tee 5,"E-R 10-18, L 10-16",5553 0211,59.4264695,24.7033313
+Tallinn,Uuskasutuskeskus,Sõpruse puiestee 255,"E-R 10-18, L 10-16",5333 9545,59.39809036,24.67687416
+Tallinn,Uuskasutuskeskus,Punane 50,"E-R 10-18, L 10-16",5553 2267,59.4355154,24.8436798
+Tallinn,Uuskasutuskeskus,Tähesaju tee 31,"E-R 10-18, L 10-16",5333 2303,59.4443964,24.8591715
+Tallinn,Uuskasutuskeskus,Mahtra 5,"E-R 10-18, L 10-16",5553 0242,59.4421095,24.8702742
+Tartu,Uuskasutuskeskus,Riia 11,"E-R 10-18, L 10-16",5553 0288,58.3741851,26.7199142
+Tartu,Uuskasutuskeskus,Kalda tee 24,"E-R 10-18, L 10-16",5553 4979,58.3721839,26.7582751
+Viljandi,Uuskasutuskeskus,Tallinna 19/21,"E-R 10-18, L 10-16",5333 8046,58.3674298,25.5950914
+Rakvere,Uuskasutuskeskus,Ferdinand Gustav Adoffi 11,"E-R 10-18, L 10-16",5333 7170,59.3486538,26.3618764
+Narva,Uuskasutuskeskus,Tallinna mnt 51/53,"E-R 10-18, L 10-16",5553 0891,59.3818846,28.1689608
+Jõhvi,Uuskasutuskeskus,Puru tee 1,"E-R 10-18, L 10-16",5559 4548,59.3524143,27.415793
+Pärnu,Uuskasutuskeskus,Lai tn. 10,"E-R 10-18, L 10-16",5553 0036,58.3887262,24.5011565
+Paide,Uuskasutuskeskus,Rüütli 9,"E-R 10-18, L 10-16",5553 0217,58.886568,25.5695269
+Võru,Uuskasutuskeskus,Vabaduse 1,"E-R 9-18, L 9-15",5556 3643,57.8471256,26.9992286
+Tallinn,Sõbralt Sõbrale,Kopli 1,E-L 10-19,6843930,59.4412932,24.7314464
+Tallinn,Sõbralt Sõbrale,Sõpruse puistee 201,E-L 10-20 ,56260050,59.4013913,24.695343
+Tallinn,Sõbralt Sõbrale,Mustamäe tee 8,"E-R 10-19, L 10-17",6843924,59.4260689,24.6964703
+Tartu,Sõbralt Sõbrale,Kalda tee 41/43,"E-R 10-19, L 10-16",6843962,58.3693689,26.7635563
+Tartu,Sõbralt Sõbrale,Sõbra 58,"E-R 10-19, L 10-16",56843997,58.365379,26.742736
+Tartu,Sõbralt Sõbrale,Võru 77,"E-R 10-19, L 10-16",56893222,58.357457,26.7192799
+Narva,Sõbralt Sõbrale,Hariduse 5d,"E-R 10-19, L 10-16",56894509,59.3805581,28.18682
+Rakvere,Sõbralt Sõbrale,Ferdinand Gustav Adoffi 11,"E-R 10-18, L 10-15",3227729,59.3486538,26.3618764
+Pärnu,Sõbralt Sõbrale,Papiniidu 19,"T-R 11-18, L 10-16",6843960,58.371014,24.5456382
+Rapla,Sõbralt Sõbrale,Kooli 6a,"E-R 10-18, L 10-14",56844021,59.0063709,24.7896467
+Jõhvi,Sõbralt Sõbrale,Narva mnt 8,"E-R 9-19, L 9-17",56844056,59.3579257,27.4156502
+Tõrva,Sõbralt Sõbrale,Aia 6,"T 13–18, K-R 10-15, L 10-14",56844023,58.0010701,25.9212605
+Keila,Sõbralt Sõbrale,Keskväljak 13,"T-R 10-18, L 10-14",684 3968,59.308275,24.4214534
+Valga,Sõbralt Sõbrale,Vabaduse 39,"E–R 9–18, L 9–15",5621 8908,57.7751405,26.041709
+Kuressaare,Sõbralt Sõbrale,Lasteaia 4,"E 14-18, T-R 10-18, L 10-15",5696 9109,58.2522817,22.4810054
+Viljandi,Sõbralt Sõbrale,Kauba 4,"E 12-18, T-R 10-18, L 10-15",5684 4019,58.3633706,25.5967236
+Põlva,Sõbralt Sõbrale,Mäe 2a,"T-R 9-18, L 9-14",799 6207,58.0521406,27.0506426
+Vändra,Test test,Turu 6a,"T-R 9-18, L 9-14",123456,58.653767268666314,25.037281559534584
