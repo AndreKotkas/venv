@@ -1,61 +1,95 @@
-{% load crispy_forms_tags %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThrifTag</title>
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA==" crossorigin="anonymous" />
 
-    <title>Home Page</title>
-  </head>
-  <body>
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Trift Shops</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!-- custom css file -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'index' %}">Map <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0" method="POST">
-      {% csrf_token %}
-      {{ form|crispy }}
-      <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-  <!--End Navbar-->
-  <div class="contaainer">
-    <div class="row mt-4">
-      <div class="col-md-10 offset-md-1">
-        {{m|safe }}
-      </div>
+<!-- header -->
+<header id="header" class="shadow bg-light">
+<nav class="container navbar">
+    <a href="/index.html" class="nav-brand text-dark">
+        <img src="../static/assets/ThrifTag_logo_transparent.png" width="150" height="150"/>
+    </a>
+
+    <!-- toggle button-->
+    <button class="toggle-button">
+        <span><i class="fas fa-bars"></i></span>
+    </button>
+
+    <!-- collapse on toggle button click -->
+    <div class="collapse">
+        <ul class="navbar-nav">
+            <a href="#" class="nav-link">Esileht</a>
+            <a href="#" class="nav-link">Blogi</a>
+            <a href="{% url 'index' %}" class="nav-link">Taaskasutuspoed<span class="sr-only">(current)</span></a>
+            <a href="#" class="nav-link">Meist</a>
+        </ul>
     </div>
-  </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- collapse on toggle button click-->
+    <div class="collapse">
+        <ul class="navbar-nav">
+            <div class="search-box">
+                <a href="#" class="nav-link"><i class="fas fa-search"></i>
+                </a>
+            </div>
+            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+        </ul>
+    </div>
+</nav>
+</header>
+<!-- main site-->
+<main id="site-main">
+    <!-- blog -->
+    <section id="posts">
+        <div class="grid">
+            <!--atricle-->
+            <div class="grid-item">
+                <article class="article">
+                    <div class="card">
+                        <div class="overflow-img">
+                            <a href="#">
+                                <img src="../static/assets/img.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="card-body text-center px-1">
+                            <a href="#" class="text-title display-1 text-dark">
+                                Hello
+                            </a>
+                            <p class="secondary-title text-secondary display-3">
+                                <span><i class="far fa-clock text-primary">Kell Kolmap 14.2023</i></span>
+                                <span><i class="far fa-comments text-primary">12</i></span>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!--atricle-->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
-  </body>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- main site-->
+
+
+
+<!-- custom js file-->
+ <script src="../static/main.js"></script>
+</body>
 </html>

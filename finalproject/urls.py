@@ -19,8 +19,8 @@ from django.urls import path, include
 from map import views as map_views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    #path("admin/", admin.site.urls),
     path("", map_views.index, name='index'),
-    path('', include('blog.urls'))
+    path('blog/', include('blog.urls'))
 ]
 
