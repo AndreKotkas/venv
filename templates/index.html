@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<!--    <link rel="import" href="C:\Users\Andre\PycharmProjects\pythonProject\venv\Final_project\pythonFinalProject\finalproject\ThriftStores.csv">-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
@@ -17,45 +18,34 @@
   <div id="map"></div>
 
   <script>
-    var map = L.map('map').setView([59.437, 24.7536], 13);
+    navigator.geolocation.getCurrentPosition( position => {
+      var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
 
-    // get coordinates
-    // const stores = (await fetch( 'localhost:blabla/stores', { method: 'GET', })).json();
-    stores = [
-          {
-                lat: 59.437,
-                long: 24.7536,
-                popup: '<p>banana</p><br><p>smurph</p>'
-          },
-          {
-                lat: 59.432,
-                long: 24.7536,
-                popup: '<p>cool lace</p><br><p>smurph</p>'
-          }
-    ]
+      // get coordinates
+      const stores = (await fetch( 'localhost:blabla/stores', { method: 'GET', })).json();
 
-    stores.forEach( store => {
-      var marker = L.marker([store.lat, store.long]).addTo(map);
-      marker.bindPopup(store.popup);
+
+      stores = [
+            {
+              lat: position.coords.latitude,
+              long: position.coords.longitude,
+              popup: 'User\'s location'
+            },
+      ]
+
+
+      stores.forEach( store => {
+        var marker = L.marker([store.lat, store.long]).addTo(map);
+        marker.bindPopup(store.popup);
+      });
     });
+
 
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
