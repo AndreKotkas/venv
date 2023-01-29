@@ -19,12 +19,7 @@ def index(request):
 
             "lat": store['LAT'],
             "long": store['LONG'],
-            # "city": store["CITY"],
-            # "Sname": store["STORE_NAME"],
-            # "addr": store["ADDRESS"],
-            # "Otime": store["OPEN_TIME"],
-            # "NR": store["PHONE_NR"]
-            "popup" : f"{store['CITY']},{store['STORE_NAME']},{store['ADDRESS']},{store['OPEN_TIME']},{store['PHONE_NR']}"
+            "popup": f"{store['CITY']},{store['STORE_NAME']},{store['ADDRESS']},{store['OPEN_TIME']},{store['PHONE_NR']}"
 
         }
         data.append(store)
