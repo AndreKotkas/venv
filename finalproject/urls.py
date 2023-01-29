@@ -18,7 +18,10 @@ from django.urls import path
 from map import views
 
 
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index, name='index'),
+    path("stores", views.index, name='index'),
+    path("", views.page),
 ]

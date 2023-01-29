@@ -17,33 +17,28 @@
 
   <div id="map"></div>
 
-  <script>
+  <script >
     navigator.geolocation.getCurrentPosition( position => {
       var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
+
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
 
-      // get coordinates
-      const stores = (await fetch( 'localhost:blabla/stores', { method: 'GET', })).json();
+      var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+      marker.bindPopup("My Location")
 
-
-      stores = [
-            {
-              lat: position.coords.latitude,
-              long: position.coords.longitude,
-              popup: 'User\'s location'
-            },
-      ]
-
-
-      stores.forEach( store => {
-        var marker = L.marker([store.lat, store.long]).addTo(map);
-        marker.bindPopup(store.popup);
-      });
-    });
+      fetch('http://localhost:8000/stores', {method: 'GET',})
+            .then((response) => response.json())
+            .then((stores) => {
+                stores.forEach( store => {
+                    var marker = L.marker([store.lat, store.long]).addTo(map);
+                    marker.bindPopup(store.popup)
+                })
+            })
+    })
 
 
   </script>

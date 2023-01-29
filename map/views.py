@@ -2,62 +2,38 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse,JsonResponse
 import geocoder
 import pandas as pd
-from .models import Search
+from django.core.serializers import serialize
+from .models import Search, Store
 from .forms import SearchForm
+from flask import request
 import csv
+import json
 
 
 # Create your views here.
-def index(request) :
-    if request.method == 'POST' :
-        form = SearchForm(request.POST)
-        if form.is_valid() :
-            form.save()
-            return redirect('/')
+def index(request):
+    stores = pd.read_csv("ThriftStores.csv")
+    data = []
+    for index, store in stores.iterrows():
+        store = {
 
-    else :
-        form = SearchForm()
-    address = Search.objects.all().last()
-    location = geocoder.osm(address)
-    lat = location.lat
-    long = location.lng
-    country = location.country
-    if lat == None or long == None :
-        address.delete()
-        return HttpResponse('Address you input is invalid')
-    # Create map object
+            "lat": store['LAT'],
+            "long": store['LONG'],
+            # "city": store["CITY"],
+            # "Sname": store["STORE_NAME"],
+            # "addr": store["ADDRESS"],
+            # "Otime": store["OPEN_TIME"],
+            # "NR": store["PHONE_NR"]
+            "popup" : f"{store['CITY']},{store['STORE_NAME']},{store['ADDRESS']},{store['OPEN_TIME']},{store['PHONE_NR']}"
 
-    franchies = pd.read_csv("ThriftStores.csv")
+        }
+        data.append(store)
 
 
-    for index, franchies in franchies.iterrows():
-        location = {
-
-                  "lat" : franchies['LAT'],
-                  "long" : franchies['LONG'],
-                  "city" : franchies["CITY"],
-                  "Sname" : franchies["STORE_NAME"],
-                  "addr" : franchies["ADDRESS"],
-                  "Otime" : franchies["OPEN_TIME"],
-                  "NR": franchies["PHONE_NR"]
-
-                 }
-        return JsonResponse(location, safe=False)
-        # location = [franchies['LAT'], franchies['LONG']]
-        # folium.Marker(location, popup=f'{franchies["CITY"], franchies["STORE_NAME"], franchies["ADDRESS"], franchies["OPEN_TIME"], franchies["PHONE_NR"]}').add_to(m)
+    return JsonResponse(data, safe=False)
 
 
-    # #Get HTML Representation of Map Objects
+def page(request):
     return render(request, 'index.html')
 
-# franchies = pd.read_csv("ThriftStores.csv")
-# franchies.head()
 
-# location = [
-#     {
-#         lat: [franchies['LAT'],
-#         long: [franchies['LONG'],
-#         popup: '<p>franchies["CITY"]</p><br><p>franchies["STORE_NAME"]</p><br><p>franchies["ADDRESS"]</p><br><p>franchies["OPEN_TIME"]</p><br><p>franchies["PHONE_NR"]</p>'
-#
-#     }
-# ];
