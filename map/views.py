@@ -1,14 +1,6 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse,JsonResponse
-import geocoder
+from django.shortcuts import render
+from django.http import JsonResponse
 import pandas as pd
-from django.core.serializers import serialize
-from .models import Search, Store
-from .forms import SearchForm
-from flask import request
-import csv
-import json
-
 
 # Create your views here.
 def index(request):
